@@ -1,0 +1,5 @@
+{
+  "extension":"/registry/extensions/menu_controller/user",
+  "extension-point":"/registry/extension_points/menu_controller",
+  "description":"Extension for 'User' AngularJS controller in Registry UI "
+}

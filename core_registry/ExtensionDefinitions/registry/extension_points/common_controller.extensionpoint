@@ -1,0 +1,4 @@
+{
+  "extension-point":"/registry/common_controller",
+  "description":"Registry UI extension point for common AngularJS controller"
+}

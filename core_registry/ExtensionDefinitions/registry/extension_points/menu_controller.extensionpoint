@@ -1,0 +1,4 @@
+{
+  "extension-point":"/registry/menu_controller",
+  "description":"Registry menu UI extension point for AngularJS controller"
+}
