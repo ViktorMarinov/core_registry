@@ -17,8 +17,8 @@ menuControllers.controller('MonitoringManageCtrl', ['$scope', '$http',
 			});
 		}
 
-		$scope.remove = function() {
-			$http.delete(accessLogUrl + location).success(function() {
+		$scope.remove = function(removeLocation) {
+			$http.delete(accessLogUrl + removeLocation).success(function() {
 				loadData();
 			}).error(function() {
 				alert('Error while removing location!');
