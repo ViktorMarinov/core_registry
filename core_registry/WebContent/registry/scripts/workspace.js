@@ -235,5 +235,5 @@ workspaceControllers.controller('WorkspaceListCtrl', ['$scope', '$sce', 'FilesSe
 
 workspaceControllers.controller('WorkspaceCtrl', function($scope, $resource) {
   $scope.objectContent = true;
-  $scope.restService = $resource('../workspace');
+  $scope.restService = $resource('../../workspace');
 });
