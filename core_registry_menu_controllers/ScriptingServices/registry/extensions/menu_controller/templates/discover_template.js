@@ -51,6 +51,18 @@ menuControllers.controller('DiscoverCtrl', ['$scope',
 			path: "#/integration/flow",
 			title: "Flows",
 			description: "Integration Flows"
+		}, {
+			image: "caret-square-o-right",
+			color: 'orange',
+			path: "#/integration/job",
+			title: "Jobs",
+			description: "Integration Jobs"
+		}, {
+			image: "caret-square-o-right",
+			color: 'orange',
+			path: "#/integration/listener",
+			title: "Listeners",
+			description: "Integration Listeners"
 		}];
 	}
 ]);
