@@ -122,7 +122,7 @@ defaultControllers.controller('CommandCtrl', function($scope, $resource) {
 });
 
 defaultControllers.controller('TestsCtrl', function($scope, $resource) {
-  $scope.restService = $resource('../scripting/tests');
+  $scope.restService = $resource('../../scripting/tests');
 });
 
 defaultControllers.controller('FlowCtrl', function($scope, $resource) {

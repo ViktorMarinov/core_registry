@@ -46,6 +46,12 @@ menuControllers.controller('DiscoverCtrl', ['$scope',
 			title: "Command",
 			description: "Command Services"
 		}, {
+			image: "cogs",
+			color: 'green',
+			path: "#/scripting/tests",
+			title: "Tests",
+			description: "Test Cases"
+		}, {
 			image: "caret-square-o-right",
 			color: 'orange',
 			path: "#/integration/flow",
