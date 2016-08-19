@@ -88,70 +88,55 @@ defaultControllers.controller('DefaultListCtrl', ['$scope', '$sce', 'FilesSearch
   }
 ]);
 
-
+// --- Discover Controllers ---
 defaultControllers.controller('ContentCtrl', function($scope, $resource) {
   $scope.objectContent = true;
-  $scope.restService = $resource('../content');
+  $scope.restService = $resource('../../content');
 });
 
 defaultControllers.controller('WebContentCtrl', function($scope, $resource) {
 	  $scope.objectContent = true;
-	  $scope.restService = $resource('../web');
+	  $scope.restService = $resource('../../web');
 });
 
 defaultControllers.controller('WebWikiCtrl', function($scope, $resource) {
 	  $scope.objectContent = true;
-	  $scope.restService = $resource('../wiki');
+	  $scope.restService = $resource('../../wiki');
 });
 
 defaultControllers.controller('MobileCtrl', function($scope, $resource) {
 	  $scope.objectContent = true;
-	  $scope.restService = $resource('../mobile');
+	  $scope.restService = $resource('../../mobile');
 });
 
 defaultControllers.controller('JavaScriptCtrl', function($scope, $resource) {
-  $scope.restService = $resource('../scripting/javascript');
-});
-
-//defaultControllers.controller('GroovyCtrl', function($scope, $resource) {
-//  $scope.restService = $resource('../scripting/groovy');
-//});
-
-//defaultControllers.controller('RubyCtrl', function($scope, $resource) {
-//  $scope.restService = $resource('../scripting/ruby');
-//});
-
-defaultControllers.controller('JavaCtrl', function($scope, $resource) {
-	  $scope.restService = $resource('../scripting/java');
+  $scope.restService = $resource('../../scripting/javascript');
 });
 
 defaultControllers.controller('SQLCtrl', function($scope, $resource) {
-	$scope.restService = $resource('../scripting/sql');
+	$scope.restService = $resource('../../scripting/sql');
 });
 
 defaultControllers.controller('CommandCtrl', function($scope, $resource) {
-	$scope.restService = $resource('../scripting/command');
+	$scope.restService = $resource('../../scripting/command');
 });
 
 defaultControllers.controller('TestsCtrl', function($scope, $resource) {
   $scope.restService = $resource('../scripting/tests');
 });
 
-//defaultControllers.controller('RoutesCtrl', function($scope, $resource) {
-//  $scope.restService = $resource('../routes');
-//});
-
 defaultControllers.controller('FlowCtrl', function($scope, $resource) {
-  $scope.restService = $resource('../flow/flow');
+  $scope.restService = $resource('../../flow/flow');
 });
 
 defaultControllers.controller('JobCtrl', function($scope, $resource) {
-  $scope.restService = $resource('../flow/job');
+  $scope.restService = $resource('../../flow/job');
 });
 
 defaultControllers.controller('ListenerCtrl', function($scope, $resource) {
-  $scope.restService = $resource('../flow/listener');
+  $scope.restService = $resource('../../flow/listener');
 });
+// ------
 
 defaultControllers.controller('MonitoringAccessCtrl', function($scope, $resource) {
 	$resource('../acclog').query({}, function(data) {
