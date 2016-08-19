@@ -139,7 +139,7 @@ defaultControllers.controller('ListenerCtrl', function($scope, $resource) {
 // ------
 
 defaultControllers.controller('MonitoringAccessCtrl', function($scope, $resource) {
-	$resource('../acclog').query({}, function(data) {
+	$resource('../../acclog').query({}, function(data) {
 		$scope.logs = data;
 	});
 });
