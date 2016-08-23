@@ -1,22 +1,9 @@
-	/*globals $routeProvider */
-	/*eslint-env jquery */
-
-	$routeProvider.when('/home', {
-      controller: 'HomeCtrl',
-      templateUrl: 'templates/home/home.html'
-    }).when('/develop', {
-        controller: 'DevelopCtrl',
-        templateUrl: 'templates/develop/develop.html'
-    }).when('/discover', {
-        controller: 'DiscoverCtrl',
-        templateUrl: 'templates/discover/discover.html'
-    }).when('/operate', {
-        controller: 'OperateCtrl',
-        templateUrl: 'templates/operate/operate.html'
-    }).when('/workspace', {
+	.when('/workspace', {
       controller: 'WorkspaceCtrl',
       templateUrl: 'templates/workspace/workspace.html'
-    }).when('/content', {
+    })
+    
+    .when('/content', {
         controller: 'ContentCtrl',
         templateUrl: 'templates/content/content.html'
     }).when('/content/import', {
@@ -28,16 +15,22 @@
     }).when('/content/project', {
       controller: 'ProjectCtrl',
       templateUrl: 'templates/content/import/import.html'
-    }).when('/web/content', {
+    })
+    
+    .when('/web/content', {
       controller: 'WebContentCtrl',
       templateUrl: 'templates/web/content/content.html'
     }).when('/web/wiki', {
       controller: 'WebWikiCtrl',
       templateUrl: 'templates/web/wiki/wiki.html'
-    }).when('/mobile', {
+    })
+    
+    .when('/mobile', {
         controller: 'MobileCtrl',
         templateUrl: 'templates/mobile/mobile.html'
-    }).when('/scripting/javascript', {
+    })
+    
+    .when('/scripting/javascript', {
       controller: 'JavaScriptCtrl',
       templateUrl: 'templates/scripting/javascript/javascript.html'
     }).when('/scripting/command', {
@@ -49,7 +42,9 @@
     }).when('/scripting/tests', {
       controller: 'TestsCtrl',
       templateUrl: 'templates/scripting/tests/tests.html'
-    }).when('/integration/flow', {
+    })
+    
+    .when('/integration/flow', {
       controller: 'FlowCtrl',
       templateUrl: 'templates/integration/flows/flows.html'
     }).when('/integration/job', {
@@ -58,27 +53,4 @@
     }).when('/integration/listener', {
         controller: 'ListenerCtrl',
         templateUrl: 'templates/integration/listeners/listeners.html'
-    }).when('/monitoring', {
-      controller: 'MonitoringCtrl',
-      templateUrl: 'templates/monitoring/monitoring.html'
-    }).when('/monitoring/manage', {
-      controller: 'MonitoringManageCtrl',
-      templateUrl: 'templates/monitoring/manage/manage.html'
-    }).when('/monitoring/hits', {
-      templateUrl: 'templates/monitoring/hits/hits.html'
-    }).when('/monitoring/response', {
-      templateUrl: 'templates/monitoring/response/response.html'
-    }).when('/monitoring/memory', {
-      templateUrl: 'templates/monitoring/memory/memory.html'
-    }).when('/monitoring/acclog', {
-      controller: 'MonitoringAccessCtrl',
-      templateUrl: 'templates/monitoring/acclog/acclog.html'
-    }).when('/monitoring/logging', {
-      templateUrl: 'templates/monitoring/logging/logging.html'
-    }).when('/monitoring/log-console', {
-        templateUrl: 'templates/monitoring/logging/log-console.html'
-    }).when('/monitoring/log', {
-        templateUrl: 'templates/monitoring/logging/log.html'
-    }).otherwise({
-      redirectTo: '/home'
-    });
+    })

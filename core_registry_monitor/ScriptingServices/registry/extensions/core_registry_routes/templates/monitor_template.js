@@ -1,0 +1,22 @@
+	.when('/monitoring', {
+      controller: 'MonitoringCtrl',
+      templateUrl: 'templates/monitoring/monitoring.html'
+    }).when('/monitoring/manage', {
+      controller: 'MonitoringManageCtrl',
+      templateUrl: 'templates/monitoring/manage/manage.html'
+    }).when('/monitoring/hits', {
+      templateUrl: 'templates/monitoring/hits/hits.html'
+    }).when('/monitoring/response', {
+      templateUrl: 'templates/monitoring/response/response.html'
+    }).when('/monitoring/memory', {
+      templateUrl: 'templates/monitoring/memory/memory.html'
+    }).when('/monitoring/acclog', {
+      controller: 'MonitoringAccessCtrl',
+      templateUrl: 'templates/monitoring/acclog/acclog.html'
+    }).when('/monitoring/logging', {
+      templateUrl: 'templates/monitoring/logging/logging.html'
+    }).when('/monitoring/log-console', {
+        templateUrl: 'templates/monitoring/logging/log-console.html'
+    }).when('/monitoring/log', {
+        templateUrl: 'templates/monitoring/logging/log.html'
+    })

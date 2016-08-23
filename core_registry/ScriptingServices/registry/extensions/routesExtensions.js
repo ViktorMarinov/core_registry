@@ -1,14 +1,19 @@
 /* globals $ */
 /* eslint-env node, dirigible */
 
+var fileUtils = require("registry/utils/fileUtils");
+
 exports.getRoutes = function() {
-	var controllers = "";
 	var extensionService = $.getExtensionService();
 
 	var extensions = extensionService.getExtensions("/registry/extension_points/routes");
+	var routes = fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/templates/routes_start.js");
+
 	for (var i=0; i < extensions.length; i++) {
 	    var extension = require(extensions[i]);
-	    controllers += extension.getRoutes() + "\n";
+	    routes += extension.getRoutes() + "\n";
 	}
-	return controllers;
+	
+	routes += fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/templates/routes_end.js");
+	return routes;
 };
