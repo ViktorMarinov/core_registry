@@ -1,3 +1,5 @@
+/*globals angular */
+/*eslint-env browser */
 var defaultServices = angular.module('defaultServices', ['ngResource']);
 
 defaultServices.factory('FilesSearch', ['$resource',
@@ -6,9 +8,8 @@ defaultServices.factory('FilesSearch', ['$resource',
   }
 ]);
 
-
-var defaultControllers = angular.module('defaultControllers', []);
-defaultControllers.controller('DefaultListCtrl', ['$scope', '$sce', 'FilesSearch',
+var controllers = angular.module('defaultControllers', []);
+controllers.controller('DefaultListCtrl', ['$scope', '$sce', 'FilesSearch',
 
   function($scope, $sce, FilesSearch) {
     /*    if (!$routeParams.pathName) {
@@ -34,7 +35,7 @@ defaultControllers.controller('DefaultListCtrl', ['$scope', '$sce', 'FilesSearch
 
     $scope.change = function(newData) {
       if (!newData.folder) {
-        $scope.iframeSrc = newData.path
+        $scope.iframeSrc = newData.path;
       } else if (newData.files) {
         $scope.selected = newData;
         $scope.paths.push(newData);
@@ -49,11 +50,11 @@ defaultControllers.controller('DefaultListCtrl', ['$scope', '$sce', 'FilesSearch
       var inx = this.paths.indexOf(path);
       $scope.paths.splice(inx + 1);
       $scope.selected = this.paths[inx];
-    }
+    };
 
     $scope.securedUrl = function(src) {
       return $sce.trustAsResourceUrl(src);
-    }
+    };
 
     $scope.$watch('search', function(newVal, oldVal) {
       if (!oldVal) {
@@ -89,56 +90,56 @@ defaultControllers.controller('DefaultListCtrl', ['$scope', '$sce', 'FilesSearch
 ]);
 
 // --- Discover Controllers ---
-defaultControllers.controller('ContentCtrl', function($scope, $resource) {
+controllers.controller('ContentCtrl', function($scope, $resource) {
   $scope.objectContent = true;
   $scope.restService = $resource('../../content');
 });
 
-defaultControllers.controller('WebContentCtrl', function($scope, $resource) {
+controllers.controller('WebContentCtrl', function($scope, $resource) {
 	  $scope.objectContent = true;
 	  $scope.restService = $resource('../../web');
 });
 
-defaultControllers.controller('WebWikiCtrl', function($scope, $resource) {
+controllers.controller('WebWikiCtrl', function($scope, $resource) {
 	  $scope.objectContent = true;
 	  $scope.restService = $resource('../../wiki');
 });
 
-defaultControllers.controller('MobileCtrl', function($scope, $resource) {
+controllers.controller('MobileCtrl', function($scope, $resource) {
 	  $scope.objectContent = true;
 	  $scope.restService = $resource('../../mobile');
 });
 
-defaultControllers.controller('JavaScriptCtrl', function($scope, $resource) {
+controllers.controller('JavaScriptCtrl', function($scope, $resource) {
   $scope.restService = $resource('../../scripting/javascript');
 });
 
-defaultControllers.controller('SQLCtrl', function($scope, $resource) {
+controllers.controller('SQLCtrl', function($scope, $resource) {
 	$scope.restService = $resource('../../scripting/sql');
 });
 
-defaultControllers.controller('CommandCtrl', function($scope, $resource) {
+controllers.controller('CommandCtrl', function($scope, $resource) {
 	$scope.restService = $resource('../../scripting/command');
 });
 
-defaultControllers.controller('TestsCtrl', function($scope, $resource) {
+controllers.controller('TestsCtrl', function($scope, $resource) {
   $scope.restService = $resource('../../scripting/tests');
 });
 
-defaultControllers.controller('FlowCtrl', function($scope, $resource) {
+controllers.controller('FlowCtrl', function($scope, $resource) {
   $scope.restService = $resource('../../flow/flow');
 });
 
-defaultControllers.controller('JobCtrl', function($scope, $resource) {
+controllers.controller('JobCtrl', function($scope, $resource) {
   $scope.restService = $resource('../../flow/job');
 });
 
-defaultControllers.controller('ListenerCtrl', function($scope, $resource) {
+controllers.controller('ListenerCtrl', function($scope, $resource) {
   $scope.restService = $resource('../../flow/listener');
 });
 // ------
 
-defaultControllers.controller('MonitoringAccessCtrl', function($scope, $resource) {
+controllers.controller('MonitoringAccessCtrl', function($scope, $resource) {
 	$resource('../../acclog').query({}, function(data) {
 		$scope.logs = data;
 	});

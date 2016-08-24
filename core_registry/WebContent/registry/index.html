@@ -38,7 +38,7 @@
   <!-- scripts/app.js -->
   <script src="../../js/registry/app.js"></script>
   <script src="scripts/workspace.js"></script>
-  <script src="templates/default.js"></script>
+  <script src="../../js/registry/default.js"></script>
 
   <script src="scripts/bootstrap-notify.min.js"></script>
   <link rel="stylesheet" href="scripts/animate.min.css">
@@ -55,7 +55,7 @@
   <script src="orion/requirejs/require.min.js"></script>
 
   <script>
-  	
+
   	/** Themes from
   		http://getbootstrap.com/
   		http://bootswatch.com/
@@ -69,30 +69,22 @@
 	    "readable" : "styles/readable/bootstrap.min.css",
 	    "simplex" : "styles/simplex/bootstrap.min.css",
 	    "yeti" : "styles/yeti/bootstrap.min.css"
-	}
-	$(function(){
-		
-		
-		
+	};
+
+	$(function() {
 		$.get( "../../theme", function( data ) {
-		
 			var themesheet = $('<link href="'+themes[data.trim()]+'" rel="stylesheet" />');
 			themesheet.appendTo('head');
 		    $('.theme-link').click(function(){
 		    	var themeName = $(this).attr('data-theme');
 		        var themeUrl = themes[$(this).attr('data-theme')];
 		        themesheet.attr('href',themeUrl);
-		       
 		        $.get( "../../theme?name=" + themeName);
 	    	});
 		});
-		
-		   
 	});
   </script>
-
 </head>
-
 <body>
 
   <div id="wrap">
@@ -138,17 +130,14 @@
                 <li><a href="#" data-theme="yeti" class="theme-link">Yeti</a></li>
               </ul>
           </li>	
-          
+
           <li class="hidden-xs" ng-controller="UserCtrl">
             <a href=""><span class="fa fa-user"></span> {{ name }}&nbsp;</a>
           </li>
         </ul>
-        
       </div>
     </nav>
 
-	
-	
     <!-- Begin page content -->
 	<div class="container" ng-view></div>
     

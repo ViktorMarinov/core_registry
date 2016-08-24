@@ -1,6 +1,13 @@
 /*eslint-env node */
 
 exports.getItem = function() {
-	var fileUtils = require("registry/utils/fileUtils");
-	return fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/extensions/nav_menu_items/templates/discover_template.js");
+	var item = {
+	    "name": "Discover",
+	    "link": "#/discover"
+	};
+	return item;
+};
+
+exports.getOrder = function() {
+	return 1;
 };

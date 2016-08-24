@@ -1,6 +1,10 @@
 /*eslint-env node */
 
 exports.getRoutes = function() {
-	var fileUtils = require("registry/utils/fileUtils");
-	return fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/extensions/core_registry_routes/templates/operate_template.js");
+	var routes = [{
+		'location': '/operate',
+        'controller': 'OperateCtrl',
+        'templateUrl': 'templates/operate/operate.html'
+	}];
+	return routes;
 };

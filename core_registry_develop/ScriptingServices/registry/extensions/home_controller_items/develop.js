@@ -1,6 +1,17 @@
 /*eslint-env node */
 
 exports.getItem = function() {
-	var fileUtils = require("registry/utils/fileUtils");
-	return fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/extensions/home_controller_items/templates/develop_template.js");
+	var item = {
+		image: 'edit',
+		color: 'blue',
+		path: '#/develop',
+		title: 'Develop',
+		description: "Development Toolkits",
+		newTab: true
+	};
+	return item;
+};
+
+exports.getOrder = function() {
+	return 0;
 };

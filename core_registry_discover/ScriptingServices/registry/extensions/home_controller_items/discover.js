@@ -1,6 +1,16 @@
 /*eslint-env node */
 
 exports.getItem = function() {
-	var fileUtils = require("registry/utils/fileUtils");
-	return fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/extensions/home_controller_items/templates/discover_template.js");
+	var item = {
+		image: "search",
+		color: 'green',
+		path: "#/discover",
+		title: "Discover",
+		description: "Service Endpoints"
+	};
+	return item;
+};
+
+exports.getOrder = function() {
+	return 1;
 };
