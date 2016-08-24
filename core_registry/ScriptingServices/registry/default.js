@@ -4,9 +4,10 @@
 var response = require("net/http/response");
 
 var fileUtils = require("registry/utils/fileUtils");
+var defaultControllerExtensions = require("registry/extensions/defaultControllerExtensions.js");
 
-var content = fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/templates/default_start.js");
-content += fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/templates/default_end.js");
+var content = fileUtils.getContent("/db/dirigible/registry/public/ScriptingServices/registry/templates/default.js");
+content += defaultControllerExtensions.getControllers();
 
 response.setContentType("text/javascript");
 response.print(content);
