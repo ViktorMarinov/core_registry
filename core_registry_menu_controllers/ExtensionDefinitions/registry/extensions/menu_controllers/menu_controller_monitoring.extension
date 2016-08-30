@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/menu_controller/monitoring",
-  "extension-point":"/registry/extension_points/menu_controller",
-  "description":"Extension for 'Monitoring' AngularJS controller in Registry UI "
-}

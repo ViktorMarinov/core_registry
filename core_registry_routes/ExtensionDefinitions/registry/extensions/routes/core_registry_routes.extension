@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/core_registry_routes/base",
-  "extension-point":"/registry/extension_points/routes",
-  "description":"Extension for 'Clone' common AngularJS controller in Registry UI "
-}
