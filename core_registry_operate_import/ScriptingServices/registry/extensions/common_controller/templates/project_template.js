@@ -1,6 +1,6 @@
-/*globals fileApp */
+/*globals registryApp */
 
-fileApp.controller('ProjectCtrl', function($scope, FileUploader) {
+registryApp.controller('ProjectCtrl', function($scope, FileUploader) {
 	$scope.pageHeader = 'Import Project Content';
 	$scope.overrideContent = false;
 

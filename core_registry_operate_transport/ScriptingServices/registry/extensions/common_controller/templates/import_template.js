@@ -1,6 +1,6 @@
-/*globals fileApp */
+/*globals registryApp */
 
-fileApp.controller('ImportCtrl', function($scope, FileUploader) {
+registryApp.controller('ImportCtrl', function($scope, FileUploader) {
 	$scope.pageHeader = 'Import Registry Content';
   	$scope.exportTitle = 'Export Registry Content';
   	$scope.exportUrl = '../../export';

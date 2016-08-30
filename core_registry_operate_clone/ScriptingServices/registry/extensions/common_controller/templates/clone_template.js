@@ -1,6 +1,6 @@
-/*globals fileApp */
+/*globals registryApp */
 
-fileApp.controller('CloneCtrl', function($scope, FileUploader) {
+registryApp.controller('CloneCtrl', function($scope, FileUploader) {
 	$scope.pageHeader = 'Import Cloned Content';
   	$scope.exportTitle = 'Export Cloned Content';
   	$scope.exportUrl = '../../clone-export';

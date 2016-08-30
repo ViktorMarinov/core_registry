@@ -1,5 +1,5 @@
-/*globals fileApp */
+/*globals registryApp */
 /*eslint-env jquery */
 
-fileApp.config(/* @callback */ function($routeProvider) {
+registryApp.config(/* @callback */ function($routeProvider) {
 
