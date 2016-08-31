@@ -1,3 +1,6 @@
+/*eslint-env node, browser, jquery*/
+/*globals angular mKeyBinding*/
+
 angular.module('workspaceServices', ['ngResource']).factory('FilesSearch', ['$resource', function($resource) {
 	return $resource('../searchw');
 }]);
@@ -32,7 +35,7 @@ workspaceControllers.controller('WorkspaceListCtrl', ['$scope', '$sce', 'FilesSe
     } else {
     	$scope.restService.query({}, onArrayQuery, onError);
     }
-    
+
     var codeEdit = null;
     require.config({waitSeconds: 0});
     require(["orion/code_edit/built-codeEdit.min", "orion/keyBinding"], function(widget, mKeyBinding) {

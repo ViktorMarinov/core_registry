@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/common_controller/project",
-  "extension-point":"/registry/extension_points/common_controller",
-  "description":"Extension for 'Project' common AngularJS controller in Registry UI "
-}

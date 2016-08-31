@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/core_registry_routes/operate",
-  "extension-point":"/registry/extension_points/routes",
-  "description":"Extension for 'Develop' in Registry UI "
-}

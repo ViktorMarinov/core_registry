@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/common_controller/import",
-  "extension-point":"/registry/extension_points/common_controller",
-  "description":"Extension for 'Import' common AngularJS controller in Registry UI "
-}

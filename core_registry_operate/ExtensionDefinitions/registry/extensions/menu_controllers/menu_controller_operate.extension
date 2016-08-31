@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/menu_controller/operate",
-  "extension-point":"/registry/extension_points/menu_controller",
-  "description":"Extension for 'Develop' AngularJS controller in Registry UI "
-}

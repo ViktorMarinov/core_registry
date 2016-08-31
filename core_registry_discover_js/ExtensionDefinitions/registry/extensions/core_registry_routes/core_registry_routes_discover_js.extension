@@ -1,5 +1,0 @@
-{
-  "extension":"/registry/extensions/core_registry_routes/discover_js",
-  "extension-point":"/registry/extension_points/routes",
-  "description":"Extension for 'Develop' in Registry UI "
-}
