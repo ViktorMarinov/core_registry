@@ -5,10 +5,14 @@ var registryApp = angular.module('registryApp', ['ngRoute', 'defaultServices', '
   'menuControllers', 'defaultControllers', 'workspaceControllers', 'angularFileUpload'
 ]);
 
+angular.module('workspaceServices', ['ngResource']).factory('FilesSearch', ['$resource', function($resource) {
+	return $resource('../searchw');
+}]);
+
 var defaultServices = angular.module('defaultServices', ['ngResource']);
 var controllers = angular.module('defaultControllers', []);
 var menuControllers = angular.module('menuControllers', []);
-
+var workspaceControllers = angular.module('workspaceControllers', []);
 
 defaultServices.factory('FilesSearch', ['$resource',
   function($resource) {

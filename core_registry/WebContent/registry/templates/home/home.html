@@ -31,41 +31,15 @@
  	</div>
     
 	<div class="center container">
-	
-	        <div class="col-lg-3 heading-lead page-scroll">
+	        <div class="col-lg-3 heading-lead page-scroll" ng-repeat="nextInfoItem in descriptionInfoItems">
 				<hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-	            <h2><i class="fa fa-edit fa-fw"></i>
-                Develop</h2>
-	            Eclipse Dirigible <sup>&trade;</sup> provides three major types of toolkits covering the Development phase of your solution:
-	            <ul> 
-	            	<li><a href="../index.html">WebIDE</a> - fully functional yet powerful, browser based IDE</li>
-	            	<li><a href="#/workspace">LightIDE</a> - limited code-editing only, browser based IDE</li>
-	            	<li>DesktopIDE - Eclipse based desktop IDE</li>
-	            </ul>
+	            <h2><i class="fa {{ nextInfoItem.icon }} fa-fw"></i>{{ nextInfoItem.title }}</h2>
+	            {{ nextInfoItem.content }}
+	            <span ng-display="nextInfoItem.listItems">
+	            	<ul>
+	            		<li ng-repeat="nextItem in nextInfoItem.listItems"><a href="{{nextItem.url}}">{{nextItem.title}}</a>{{nextItem.description}}</li>
+	            	</ul>
+	            </span>
 	        </div>
-
-	        <div class="col-lg-3 heading-lead">
-				<hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-	            <h2><i class="fa fa fa-search fa-fw"></i>
-                Discover</h2>
-	            Browse the available source content of the artifacts in the Registry or search for services endpoints in a live Eclipse Dirigible <sup>&trade;</sup> instance. 
-	        </div>
-
-	        <div class="col-lg-3 heading-lead">
-				<hr class="section-heading-spacer">
-		        <div class="clearfix"></div>
-		        <h2><i class="fa fa-wrench fa-fw"></i>
-                Operate</h2>
-	            Perform the life-cycle management operations on a live Eclipse Dirigible <sup>&trade;</sup> instance such as Import, Export, Backup and configurations.
-	        </div>
-	    
-		    <div class="col-lg-3 heading-lead">
-			    <hr class="section-heading-spacer">
-		        <div class="clearfix"></div>
-		        <h2><i class="fa fa-area-chart fa-fw"></i>
-	                Monitor</h2>
-		            Monitor the basic metrics of a live Eclipse Dirigible <sup>&trade;</sup> instance as well as inspect the applications and audit logs.
-		        </div>
-		    </div>
+	    </div>

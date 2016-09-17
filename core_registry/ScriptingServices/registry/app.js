@@ -44,5 +44,4 @@ function sendResponse(content, contentType) {
 	response.print(content);
 	response.flush();
 	response.close();	
-
 }
